@@ -106,7 +106,3 @@ country_event = {
     }
 }
 
-<<<<<<< HEAD
-=======
-#kupsztyl
->>>>>>> refs/remotes/origin/main
