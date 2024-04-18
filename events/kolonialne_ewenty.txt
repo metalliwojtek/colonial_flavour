@@ -1,5 +1,6 @@
 namespace = m_event
 
+#switching to colonial nation event
 country_event = {
     id = m_event.1
     title = "m_event.1_title"
@@ -22,9 +23,12 @@ country_event = {
  
     option = {
         name = "m_event.1_opcja1"
-        any_subject_country = {
-            clr_country_flag = cn_switch1
+        ROOT ={
+            every_subject_country = {
+                clr_country_flag = cn_switch1
+            }
         }
+        
         switch_tag = event_target:kolonialne1
         ai_chance = {
             factor = 0
@@ -34,8 +38,10 @@ country_event = {
     option = {
         name = "m_event.1_opcja2"
         add_prestige = -10
-        any_subject_country = {
-            clr_country_flag = cn_switch1
+        ROOT ={
+            every_subject_country = {
+                clr_country_flag = cn_switch1
+            }
         }
         ai_chance = {
             factor = 100
@@ -43,7 +49,7 @@ country_event = {
     }
 }
 
-
+#giving colonial nation appropriate flag event
 country_event = {
     id = m_event.2
     title = "Tytuł Twojego Eventu"
@@ -58,10 +64,7 @@ country_event = {
                 is_colonial_nation = yes
                 ai = yes
                 NOT ={
-                    had_country_flag = {
-                        flag = cn_switch1
-                        days = 1
-                    }
+                    has_country_flag = ewent_odpalony
                 }
             }
         }
@@ -93,6 +96,7 @@ country_event = {
         hidden_effect = {
             ROOT = {
                 set_country_flag = cn_switch1
+                set_country_flag = ewent_odpalony
             }
         }
     }
@@ -105,7 +109,3 @@ country_event = {
         }
     }
 }
-
-#sprawdzam merge
-#kutas
-#jamestown
