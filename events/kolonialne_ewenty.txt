@@ -1,0 +1,107 @@
+namespace = m_event
+
+country_event = {
+    id = m_event.1
+    title = "Tytuł Twojego Eventu"
+    desc = "Opis Twojego Eventu"
+    picture = "gfx/events/default_event.dds"
+    major = no
+    fire_only_once = no
+
+    trigger = {
+        ROOT ={
+            any_subject_country = {
+                has_country_flag = cn_switch1
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+ 
+    option = {
+        name = "Wyslij - Przelacz sie na to panstwo kolonialne"
+        any_subject_country = {
+            clr_country_flag = cn_switch1
+        }
+        switch_tag = event_target:kolonialne1
+        ai_chance = {
+            factor = 0
+        }
+    }
+   
+    option = {
+        name = "Nie wysylaj"
+        add_prestige = -10
+        any_subject_country = {
+            clr_country_flag = cn_switch1
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+
+country_event = {
+    id = m_event.2
+    title = "Tytuł Twojego Eventu"
+    desc = "Opis Twojego Eventu"
+    picture = "gfx/events/default_event.dds"
+    major = no
+    fire_only_once = no
+    
+    trigger = {
+        ROOT ={
+            AND ={
+                is_colonial_nation = yes
+                ai = yes
+                NOT ={
+                    had_country_flag = {
+                        flag = cn_switch1
+                        days = 1
+                    }
+                }
+            }
+        }
+    }
+   
+    mean_time_to_happen = {
+        months = 1
+    }
+   
+    immediate = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    any_country = {
+                        is_colonial_nation = yes
+                    }
+                }
+            }
+            save_global_event_target_as = kolonialne1
+        }
+    }
+   
+    option = {
+        name = "Pomoc"
+        add_prestige = 5
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            ROOT = {
+                set_country_flag = cn_switch1
+            }
+        }
+    }
+   
+    option = {
+        name = "Brak pomocy"
+        add_prestige = -5
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
