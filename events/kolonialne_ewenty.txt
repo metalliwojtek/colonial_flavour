@@ -2,8 +2,8 @@ namespace = m_event
 
 country_event = {
     id = m_event.1
-    title = "Tytuł Twojego Eventu"
-    desc = "Opis Twojego Eventu"
+    title = "m_event.1_title"
+    desc = "m_event.1_desc"
     picture = "gfx/events/default_event.dds"
     major = no
     fire_only_once = no
@@ -21,7 +21,7 @@ country_event = {
     }
  
     option = {
-        name = "Wyslij - Przelacz sie na to panstwo kolonialne"
+        name = "m_event.1_opcja1"
         any_subject_country = {
             clr_country_flag = cn_switch1
         }
@@ -32,7 +32,7 @@ country_event = {
     }
    
     option = {
-        name = "Nie wysylaj"
+        name = "m_event.1_opcja2"
         add_prestige = -10
         any_subject_country = {
             clr_country_flag = cn_switch1
@@ -107,3 +107,5 @@ country_event = {
 }
 
 #sprawdzam merge
+#kutas
+#jamestown
