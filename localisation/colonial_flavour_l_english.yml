@@ -1,3 +1,6 @@
 ﻿l_english:
- #DECISIONS
- move_pomeranian_capital_title: "Move court to Stettin Ducal Castle"
+ #eventy
+ m_event.1_opcja1: "Send Governor"
+ m_event.1_opcja2: "Leave them be"
+ m_event.1_title: "Need for Supervision"
+ m_event.1_desc: "Our colony ask for help"
